@@ -59,7 +59,7 @@
                     v-bind:key="index" v-for="(user,index) in users">
                 <a :href="`/users/${user.id}`" class="text-decoration-none">
                     <strong>{{ user.name }}</strong>
-                    <div>{{ user.email }}</div>
+                    <div>{{ user.email }} </div>
                 </a>
                 <div class="d-flex gap-2">
                     <a :href="`/users/${user.id}`" class="btn btn-sm btn-outline-primary">
