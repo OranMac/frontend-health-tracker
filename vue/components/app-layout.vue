@@ -5,7 +5,7 @@
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand fw-semibold" href="/">
-                    Health Tracker
+                    Oran Tracker
                 </a>
 
                 <button
