@@ -10,7 +10,7 @@
                 <div class="ibm-card-body">
                     <h2 class="card-title ibm-user-text fw-bold">{{users.length}}</h2>
                     <p class="text-muted mb-3">Total users</p>
-                    <a href="/users" class="ibm-card-action">
+                    <a class="ibm-card-action" href="/users">
                         <i class="fas fa-arrow-right me-1"></i>View Details
                     </a>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="ibm-card-body">
                     <h2 class="card-title ibm-activity-text fw-bold">{{activities.length}}</h2>
                     <p class="text-muted mb-3">Recorded activities</p>
-                    <a href="/activities" class="ibm-card-action">
+                    <a class="ibm-card-action" href="/activities">
                         <i class="fas fa-arrow-right me-1"></i>View Details
                     </a>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="ibm-card-body">
                     <h2 class="card-title ibm-heart-rate-text fw-bold">{{heartRates.length}}</h2>
                     <p class="text-muted mb-3">Total measurements</p>
-                    <a href="/heart-rates" class="ibm-card-action">
+                    <a class="ibm-card-action" href="/heart-rates">
                         <i class="fas fa-arrow-right me-1"></i>View Details
                     </a>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="ibm-card-body">
                     <h2 class="card-title ibm-run-text fw-bold">{{runs.length}}</h2>
                     <p class="text-muted mb-3">Completed runs</p>
-                    <a href="/runs" class="ibm-card-action">
+                    <a class="ibm-card-action" href="/runs">
                         <i class="fas fa-arrow-right me-1"></i>View Details
                     </a>
                 </div>
@@ -73,7 +73,7 @@
                                 <p class="text-muted mb-3">Total tracks recorded</p>
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                <a href="/tracks" class="ibm-card-action">
+                                <a class="ibm-card-action" href="/tracks">
                                     <i class="fa-solid fa-earth-europe me-1"></i>Explore Tracks
                                 </a>
                             </div>
@@ -86,53 +86,53 @@
 </template>
 
 <script>
-app.component('home-page', {
-    template: "#home-page",
-    data: () => ({
-    users: [],
-    activities: [],
-    heartRates: [],
-    runs: [],
-    tracks: []
-    }),
-created() {
-    // Fetch all data when component is created
-    this.fetchAllData();
-    },
-    methods: {
-    fetchAllData() {
-    axios.get("/api/users")
-    .then(res => this.users = res.data)
-    .catch(error => {
-    console.error("Error fetching users:", error);
-    alert("Error while fetching users");
-    });
+    app.component('home-page', {
+        template: "#home-page",
+        data: () => ({
+        users: [],
+        activities: [],
+        heartRates: [],
+        runs: [],
+        tracks: []
+        }),
+    created() {
+        // Fetch all data when component is created
+        this.fetchAllData();
+        },
+        methods: {
+        fetchAllData() {
+        axios.get("/api/users")
+        .then(res => this.users = res.data)
+        .catch(error => {
+        console.error("Error fetching users:", error);
+        alert("Error while fetching users");
+        });
 
-axios.get("/api/activities")
-    .then(res => this.activities = res.data)
+    axios.get("/api/activities")
+        .then(res => this.activities = res.data)
+        .catch(error => {
+        console.error("Error fetching activities:", error);
+        alert("Error while fetching activities");
+        });
+        axios.get("/api/heart-rates")
+        .then(res => this.heartRates = res.data)
+        .catch(error => {
+        console.error("Error fetching heart rates:", error);
+        alert("Error while fetching heart rates");
+        });
+    axios.get("/api/runs")
+    .then(res => this.runs = res.data)
     .catch(error => {
-    console.error("Error fetching activities:", error);
-    alert("Error while fetching activities");
+    console.error("Error fetching runs:", error);
+    alert("Error while fetching runs");
     });
-    axios.get("/api/heart-rates")
-    .then(res => this.heartRates = res.data)
+    axios.get("/api/tracks")
+    .then(res => this.tracks = res.data)
     .catch(error => {
-    console.error("Error fetching heart rates:", error);
-    alert("Error while fetching heart rates");
+    console.error("Error fetching tracks:", error);
+    alert("Error while fetching tracks");
     });
-axios.get("/api/runs")
-.then(res => this.runs = res.data)
-.catch(error => {
-console.error("Error fetching runs:", error);
-alert("Error while fetching runs");
-});
-axios.get("/api/tracks")
-.then(res => this.tracks = res.data)
-.catch(error => {
-console.error("Error fetching tracks:", error);
-alert("Error while fetching tracks");
-});
-}
-}
-});
+    }
+    }
+    });
 </script>

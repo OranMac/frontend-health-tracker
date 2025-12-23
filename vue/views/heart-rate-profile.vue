@@ -21,7 +21,8 @@
                             <i class="fa-regular fa-floppy-disk"></i>
                         </button>
                         <button
-                                @click="deleteHeartRate" class="btn btn-sm btn-outline-danger" title="Delete heart-rate">
+                                @click="deleteHeartRate" class="btn btn-sm btn-outline-danger"
+                                title="Delete heart-rate">
                             <i class="fa fa-trash"></i>
                         </button>
                     </div>

@@ -9,7 +9,8 @@
 
                     <div class="col-auto">
                         <button
-                                class="btn btn-lg btn-outline-primary" title="Add HeartRate" @click="hideForm = !hideForm">
+                                @click="hideForm = !hideForm" class="btn btn-lg btn-outline-primary"
+                                title="Add HeartRate">
                             <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
@@ -22,49 +23,49 @@
                         <div class="mb-3">
                             <label class="form-label">Max Heart Rate</label>
                             <input
-                                    type="text"
                                     class="form-control"
-                                    v-model="formData.maximum"
                                     placeholder="Enter maximum"
                                     required
+                                    type="text"
+                                    v-model="formData.maximum"
                             />
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Bse Heart Rate</label>
                             <input
-                                    type="text"
                                     class="form-control"
-                                    v-model="formData.base"
                                     placeholder="Enter Base"
                                     required
+                                    type="text"
+                                    v-model="formData.base"
                             />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Intensity</label>
                             <input
-                                    type="number"
                                     class="form-control"
-                                    v-model="formData.intensity"
                                     placeholder="Enter intensity"
                                     required
+                                    type="number"
+                                    v-model="formData.intensity"
                             />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">RunId</label>
                             <input
-                                    type="number"
                                     class="form-control"
-                                    v-model="formData.runId"
                                     placeholder="Enter RunId"
                                     required
+                                    type="number"
+                                    v-model="formData.runId"
                             />
                         </div>
                         <div class="d-flex gap-2">
-                            <button type="submit" class="btn btn-primary btn-sm">
+                            <button class="btn btn-primary btn-sm" type="submit">
                                 Add HeartRate
                             </button>
-                            <button type="button" class="btn btn-outline-secondary btn-sm"@click="hideForm = true">
+                            <button @click="hideForm = true" class="btn btn-outline-secondary btn-sm" type="button">
                                 Cancel
                             </button>
                         </div>
@@ -75,7 +76,7 @@
         <div class="list-group list-group-flush">
             <div
                     class="list-group-item d-flex align-items-start justify-content-between"
-                    v-for="(heartRate,index) in heartRates" v-bind:key="index">
+                    v-bind:key="index" v-for="(heartRate,index) in heartRates">
                 <a :href="`/heart-rates/${heartRate.id}`" class="text-decoration-none">
                     <strong>{{ heartRate.id }}</strong>
                 </a>
@@ -83,12 +84,12 @@
                     <a :href="`/heart-rates/${heartRate.id}`" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-pencil"></i>
                     </a>
-                    <button class="btn btn-sm btn-outline-danger" @click="deleteHeartRate(heartRate)">
+                    <button @click="deleteHeartRate(heartRate)" class="btn btn-sm btn-outline-danger">
                         <i class="fa fa-trash"></i>
                     </button>
                 </div>
             </div>
-            <div v-if="heartRates.length === 0" class="text-center">
+            <div class="text-center" v-if="heartRates.length === 0">
                 No heart-rates found
             </div>
         </div>

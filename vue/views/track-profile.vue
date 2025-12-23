@@ -54,12 +54,12 @@
             <div class="row ibm-card-header">
                 <h2 class="mb-2">Runs</h2>
                 <div class="ibm-footer">
-                    <p v-if="runs.length === 0" class="text-muted mb-0">
+                    <p class="text-muted mb-0" v-if="runs.length === 0">
                         No runs yet.
                     </p>
 
-                    <ul v-else class="mb-0 ps-3">
-                        <li v-for="run in runs" :key="run.id">
+                    <ul class="mb-0 ps-3" v-else>
+                        <li :key="run.id" v-for="run in runs">
                             <a :href="`/runs/${run.id}`" class="btn btn-sm btn-outline-primary">
                                 {{ run.id }}.</a> {{ run.pace }} minutes/Km
                         </li>
