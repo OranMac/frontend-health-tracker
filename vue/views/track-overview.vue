@@ -67,7 +67,8 @@
                     class="list-group-item d-flex align-items-start justify-content-between"
                     v-bind:key="index" v-for="(track,index) in tracks">
                 <a :href="`/tracks/${track.id}`" class="text-decoration-none">
-                    <strong>{{ track.id }}</strong>
+                    <strong>{{ track.id }}</strong> {{ track.title }}
+                    <div>Distance {{ track.distance }} km </div>
                 </a>
                 <div class="d-flex gap-2">
                     <a :href="`/tracks/${track.id}`" class="btn btn-sm btn-outline-primary">
