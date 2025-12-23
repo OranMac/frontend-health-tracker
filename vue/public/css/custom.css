@@ -1,0 +1,180 @@
+:root {
+  --gray-10: #F4F4F4;
+  --gray-30: #C6C6C6;
+  --gray-70: #525252;
+  --gray-100: #161616;
+  --blue-60: #0F62FE;
+  --blue-70: #0043CE;
+
+  --orange-50: #FF832B;
+  --green-50: #24A148;
+  --red-60: #DA1E28;
+
+  --color-bg: var(--gray-30);
+  --color-surface: var(--gray-10);
+  --color-text-primary: var(--gray-100);
+  --color-text-secondary: var(--gray-70);
+
+  --color-primary: var(--blue-60);
+  --color-primary-hover: var(--blue-70);
+}
+
+.ibm-card {
+  flex: 0 0 25%;
+  max-width: 100%;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  background-color: var(--color-surface, #fff);
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  box-sizing: border-box;
+}
+
+.ibm-card-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.ibm-footer{
+  background-color: var(--color-bg);
+  color: var(--blue-70);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.ibm-card-body {
+  background-color: var(--color-bg)
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ibm-card-body h2 {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 0;
+}
+
+.ibm-card-body p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.ibm-card-action {
+  margin-top: auto;
+  align-self: center;
+  width: 100%;
+  align-self: stretch;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition:
+      background-color 0.25s ease;
+}
+
+.ibm-card-action:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.ibm-user-color {
+  background-color: var(--blue-70);
+  border-color: var(--gray-30);
+}
+
+.ibm-user-text {
+  color: var(--blue-70);
+}
+
+.ibm-activity-color {
+  background-color: var(--orange-50);
+  border-color: var(--gray-30);
+}
+
+.ibm-activity-text {
+  color: var(--orange-50);
+}
+
+.ibm-heart-rate-color {
+  background-color: var(--red-60);
+  border-color: var(--gray-30);
+}
+
+.ibm-heart-rate-text {
+  color: var(--red-60);
+}
+
+.ibm-run-color {
+  background-color: var(--blue-60);
+  border-color: var(--gray-30);
+}
+
+.ibm-run-text {
+  color: var(--blue-60);
+}
+
+.ibm-track-color {
+  background-color: var(--green-50);
+  border-color: var(--gray-30);
+}
+
+.ibm-run-text {
+  color: var(--green-50);
+}
+
+.navbar {
+  background-color: var(--gray-30);
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+
+.navbar-brand {
+  color: var(--blue-70);
+  font-size: 1rem;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--blue-60);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to{
+  opacity: 0;
+}

@@ -1,0 +1,15 @@
+/* static/css/heart-rate.css */
+@import './variables.css';
+
+.heart-rate-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.heart-rate-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-danger);
+}
