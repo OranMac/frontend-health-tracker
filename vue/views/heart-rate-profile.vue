@@ -58,10 +58,11 @@
 
             <div class="row ibm-card-header">
                 <h2 class="mb-2">Runs</h2>
-                <h2 class="mb-2">
-                    <a :href="`/runs/${heartRate.runId}`" class="text-decoration-none">
-                        Run for this Heartrate</a>
-                </h2>
+            </div>
+
+            <div class="ibm-card-body">
+                <a :href="`/runs/${heartRate.runId}`" class="text-decoration-none">
+                    Run for this Heartrate</a>
             </div>
         </div>
 
