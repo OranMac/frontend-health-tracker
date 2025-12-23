@@ -79,6 +79,7 @@
                     v-bind:key="index" v-for="(heartRate,index) in heartRates">
                 <a :href="`/heart-rates/${heartRate.id}`" class="text-decoration-none">
                     <strong>{{ heartRate.id }}</strong>
+                    <div> Intensity: {{ heartRate.intensity }}; Maximum {{ heartRate.base }}</div>
                 </a>
                 <div class="d-flex gap-2">
                     <a :href="`/heart-rates/${heartRate.id}`" class="btn btn-sm btn-outline-primary">
